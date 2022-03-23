@@ -22,6 +22,11 @@ def get_submodules():
         'utils': keras_utils,
     }
 
+def set_kwargs(kwargs):
+    
+    global backend, layers, models, keras_utils 
+    backend, layers, models, keras_utils  = kwargs['backend'], kwargs['layers'], kwargs['models'], kwargs['utils']
+
 
 def check_input_shape(input_shape, factor):
     if input_shape is None:
